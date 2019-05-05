@@ -1,0 +1,72 @@
+@charset 'utf-8';
+ 
+@import "~bulma/sass/utilities/functions";
+ 
+@import "./styles/custom_colors.scss";
+ 
+$custom-colors: (
+  "custom-green-darker": ($custom-green-darker),
+  "custom-green-lighter": ($custom-green-lighter),
+  "custom-gray": ($custom-gray),
+  "custom-gray-darker": ($custom-gray-darker),
+  "custom-black": ($custom-black),
+  "custom-orange": ($custom-orange),
+);
+ 
+// Import Bulma styles
+@import "~bulma/bulma";
+ 
+// Import rbx style fixes (**very simple**)
+@import "~rbx/rbx";
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dashed_box {
+  font-size: 14px;
+  background: white;
+  font-weight: bold;
+  border: 1px dashed $custom-gray;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.modal_root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 2;
+}
